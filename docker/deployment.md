@@ -1,25 +1,25 @@
-
-
-
-
-
-
-
-
-
-
-
-
+```
+code
+su root
+root
+su oracle
+orcl
+```
 
 
 ```
+docker run -it -v /Users/tianm/docker/volume/:/home/oracle/volume -p 8002:22  -p 1521:1521 -p 8020:8080 --name orcl-11g-v1 imagezero/orcl-11g:v1 /bin/bash
+
 su root
+root
+
 vi /home/oracle/.bashrc
 export ORACLE_HOME=/home/oracle/app/oracle/product/11.2.0/dbhome_2
 export ORACLE_SID=helowin
 export PATH=$ORACLE_HOME/bin:$PATH
 
-cp /home/oracle/volume/oradata/helowin/* /home/oracle/app/oracle/oradata/helowin/
+/home/oracle/app/oracle/oradata/helowin/
+cp /home/oracle/orcl_kits/oradata/helowin/* /home/oracle/app/oracle/oradata/helowin/
 
 sqlplus /nolog;
 conn /as sysdba;
@@ -64,6 +64,8 @@ sql> startup mount; --> The mount was successful.
 sql> alter database open;
 
 
+java -version
+javac -version
 
 vi /etc/profile
 #set Java environment
