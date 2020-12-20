@@ -1,0 +1,147 @@
+
+
+
+
+select * from dba_users;
+select * from all_users;
+select * from user_users;
+
+
+
+
+
+
+create user bay_all identified by bay;
+
+grant connect,resource,dba to bay_all;
+
+
+select count(*) from testword2;
+
+
+
+imp 'sys/admin AS SYSDBA' file=C:\Oracle_DB_Dump.dmp full=Y
+
+imp 'itest/imtest' file=/home/oracle/bay_data_all_2019_01_08.dmp full=Y
+
+
+connect  itest/imtest;
+
+
+/home/oracle/bay_data_all_2019_01_08.dmp
+
+
+从netease20190521导入
+2020_8_24_1
+
+create user bay_data_all_2020_8_24_1 identified by bay;
+grant connect,resource,dba to bay_data_all_2020_8_24_1;
+
+create user bay_all_before_2020_8_24_1 identified by bay;
+grant connect,resource,dba to bay_all_before_2020_8_24_1;
+
+create user ince_2020_8_24_1 identified by ince;
+grant connect,resource,dba to ince_2020_8_24_1;
+
+create user iterminal_2020_8_24_1 identified by iterminal;
+grant connect,resource,dba to iterminal_2020_8_24_1;
+
+create user imajor_2020_8_24_1 identified by major;
+grant connect,resource,dba to imajor_2020_8_24_1;
+
+create user merge_back_2020_8_24_1 identified by merge_back;
+grant connect,resource,dba to merge_back_2020_8_24_1;
+
+
+create user word_2020_8_24_1 identified by word;
+grant connect,resource,dba to word_2020_8_24_1;
+
+
+20190318
+/home/oracle/volume/tianm/orcl/oracle_bay/bay_all.dmp
+/home/oracle/volume/tianm/orcl/oracle_bay/inec20190318.dmp
+/home/oracle/volume/tianm/orcl/oracle_bay/major.dmp
+/home/oracle/volume/tianm/orcl/oracle_bay/iterminal.dmp
+/home/oracle/volume/tianm/orcl/oracle_bay/merge_back.dmp
+
+20190521
+/home/oracle/volume/tianm/orcl/oracle20190521/imajor20190521.dmp
+/home/oracle/volume/tianm/orcl/oracle20190521/inec.dmp
+/home/oracle/volume/tianm/orcl/oracle20190521/shabay.dmp
+
+20170608
+/home/oracle/volume/tianm/orcl/oracle20190521/table_shanbay.dmp
+
+
+
+imp '/' file= full=Y
+
+imp 'bay_data_all_2020_8_24_1/bay' file=/home/oracle/volume/tianm/orcl/oracle20190521/shabay.dmp full=Y
+imp 'bay_all_before_2020_8_24_1/bay' file=/home/oracle/volume/tianm/orcl/oracle20190521/table_shanbay.dmp full=Y
+imp 'ince_2020_8_24_1/ince' file=/home/oracle/volume/tianm/orcl/oracle20190521/inec.dmp full=Y
+imp 'iterminal_2020_8_24_1/iterminal' file=/home/oracle/volume/tianm/orcl/oracle_bay/iterminal.dmp full=Y
+error
+imp 'imajor_2020_8_24_1/major' file=/home/oracle/volume/tianm/orcl/oracle20190521/imajor20190521.dmp full=Y
+correcct
+imp 'imajor_2020_8_24_1/major' file=/home/oracle/volume/tianm/orcl/oracle_bay/major.dmp full=Y
+imp 'merge_back_2020_8_24_1/merge_back' file=/home/oracle/volume/tianm/orcl/oracle_bay/merge_back.dmp full=Y
+
+imp 'word_2020_8_24_1/word' file=/home/oracle/volume/tianm/orcl/oracle20190521/iword20170608.dmp full=Y
+
+
+
+tomcat
+
+terminal
+iterminal_2020_8_24_1
+iterminal
+
+bay
+bay_data_all_2020_8_24_1
+bay
+
+bay_old
+
+nce
+ince_2020_8_24_1
+ince
+
+major
+imajor_2020_8_24_1
+major
+
+word
+word_2020_8_24_1
+word
+
+vi /usr/local/Tomcat/webapps/wordweb/WEB-INF/classes/c3p0-config.xml
+vi /usr/local/Tomcat/webapps/terminal/WEB-INF/classes/c3p0-config.xml
+vi /usr/local/Tomcat/webapps/bay/WEB-INF/classes/c3p0-config.xml
+vi /usr/local/Tomcat/webapps/nce/WEB-INF/classes/c3p0-config.xml
+vi /usr/local/Tomcat/webapps/major/WEB-INF/classes/c3p0-config.xml
+vi /usr/local/Tomcat/webapps/word/WEB-INF/classes/c3p0-config.xml
+
+
+
+http://192.168.1.196:8020/terminal/
+http://192.168.1.196:8020/bay/
+http://192.168.1.196:8020/nce/
+http://192.168.1.196:8020/major/
+http://192.168.1.196:8020/word/
+
+
+
+2020-8-24-1 22:24:27
+add new major
+
+create user major_2020_8_24_1 identified by nmajor;
+grant connect,resource,dba to major_2020_8_24_1;
+
+imp 'major_2020_8_24_1/nmajor' file=/home/oracle/volume/tianm/orcl/oracle20190521/shabay.dmp full=Y
+vi /usr/local/Tomcat/webapps/nmajor/WEB-INF/classes/c3p0-config.xml
+
+
+
+vi /usr/local/Tomcat/webapps/imajor/WEB-INF/classes/c3p0-config.xml
+
+

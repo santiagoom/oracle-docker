@@ -1,0 +1,154 @@
+
+
+
+sqlplus
+word_2020_8_24_1/word;
+
+CREATE TABLE TESTWORD2_2020_12_20_0 as select * from TESTWORD2;
+
+drop table TESTWORD2;
+
+imp 'word_2020_8_24_1/word' file=/home/oracle/volume/tianm/orcl/bay_all.dmp full=Y
+
+CREATE TABLE shanbay_latest as select * from TESTWORD2;
+
+drop table TESTWORD2;
+
+CREATE TABLE TESTWORD2 as select * from TESTWORD2_2020_12_20_0;
+
+CREATE TABLE TESTWORD2_bak1 as select * from TESTWORD2;
+
+SQL> select * from shanbay_latest where g_id = 2756;
+   G_ID L_ID NAME                                                                             PRON                                                                             P M                                                                                MDATE       L_NA  MEANING                                                                          BOOK_NAME                MTIME
+------- ---- -------------------------------------------------------------------------------- -------------------------------------------------------------------------------- - -------------------------------------------------------------------------------- ----------- ----- -------------------------------------------------------------------------------- ------------------------ -----
+   2756      free                                                                             /friː/                                                                             adjective<br>                                                                                      adj. 自由的,大方的,免费的<br>
+                                                                                                                                                                                 : not costing any money<br>                                                                        vt. 释放,解放<br>
+                                                                                                                                                                                 : not held as a slave or prisoner<br>                                                              adv. 自由地,免费地<br>
+                                                                                                                                                                                 : not physically held by something<br>                                                             <br>
+                                                                                                                                                                                 verb<br>                                                                                           adv.<br>
+                                                                                                                                                                                 : to release (a person or animal) from a prison, cage, etc.<br>                                    1: without restraint<br>
+                                                                                                                                                                                 : to release (someone or something) from being physically held or blocked<br>                      v.<br>
+                                                                                                                                                                                 : to cause or allow (someone or something) to stop having or being affected by s                   1: grant freedom to; free from confinement<br>
+                                                                                                                                                                                 adverb<br>                                                                                         n.<br>
+                                                                                                                                                                                 : in a free way<br>                                                                                1: people who are free<br>
+                                                                                                                                                                                 : without charge : at no cost<br>                                                                  adj.<br>
+                                                                                                                                                                                                                                                                                    1: able to act at will; not hampered; not under compulsion or restraint<br>
+
+SQL> select * from TESTWORD2 where g_id = 21141;
+  G_ID L_ID NAME                             PRON                                                     P                                                                                M                                                                                MDATE       L_NA  MEANING                                                                          BOOK_NAME                MTIME
+------ ---- -------------------------------- -------------------------------------------------------- -------------------------------------------------------------------------------- -------------------------------------------------------------------------------- ----------- ----- -------------------------------------------------------------------------------- ------------------------ -----
+ 21141      free                             /friː/                                                   adj. 自由的,大方的,免费的                                                                                                                                         2016/8/6    TPL12                                                                                  TOEFL_PLUS                   1
+                                                                                                      vt. 释放,解放
+                                                                                                      adv. 自由地,免费地
+
+                                                                                                      adv.
+                                                                                                      1: without restraint
+                                                                                                      v.
+                                                                                                      1: grant freedom to; free from confinement
+                                                                                                      n.
+                                                                                                      1: people who are free
+                                                                                                      adj.
+                                                                                                      1: able to act at will; not hampered; not under compulsion or restraint
+
+SQL> desc TESTWORD2;
+
+SQL> desc shanbay_latest;
+Name      Type           Nullable Default Comments
+--------- -------------- -------- ------- --------
+G_ID      NUMBER(6)      Y
+L_ID      NUMBER(3)      Y
+NAME      VARCHAR2(100)  Y
+PRON      VARCHAR2(100)  Y
+P         VARCHAR2(1)    Y
+M         VARCHAR2(2000) Y
+MDATE     DATE           Y
+L_NA      VARCHAR2(5)    Y
+MEANING   VARCHAR2(2000) Y
+BOOK_NAME VARCHAR2(24)   Y
+MTIME     NUMBER(2)      Y
+
+SQL> desc TESTWORD2;
+Name      Type           Nullable Default Comments
+--------- -------------- -------- ------- --------
+G_ID      NUMBER(5)      Y
+L_ID      NUMBER(3)      Y
+NAME      VARCHAR2(32)   Y
+PRON      VARCHAR2(56)   Y
+P         VARCHAR2(2000) Y
+M         VARCHAR2(2000) Y
+MDATE     DATE           Y
+L_NA      VARCHAR2(5)    Y
+MEANING   VARCHAR2(2000) Y
+BOOK_NAME VARCHAR2(24)   Y
+MTIME     NUMBER(2)      Y
+
+
+UPDATE table1
+SET column1 = (SELECT expression1
+               FROM table2
+               WHERE conditions)
+[WHERE conditions];
+Parameters or Arguments
+
+UPDATE TESTWORD2
+SET M = (SELECT M
+FROM shanbay_latest
+WHERE TESTWORD2.name=shanbay_latest.name)
+
+UPDATE TESTWORD2
+SET MEANING = (SELECT MEANING
+FROM shanbay_latest
+WHERE TESTWORD2.name=shanbay_latest.name)
+[WHERE conditions];
+Parameters or Arguments
+
+select distinct
+
+
+SELECT COUNT(name) FROM shanbay_latest;
+SQL> SELECT COUNT(name) FROM shanbay_latest;
+COUNT(NAME)
+-----------
+     175600
+
+SELECT COUNT(DISTINCT name) FROM shanbay_latest
+
+SQL> SELECT COUNT(DISTINCT name) FROM shanbay_latest;
+COUNT(DISTINCTNAME)
+-------------------
+             175597
+
+select g_id,name from shanbay_latest HAVING count(name) > 1;
+
+
+SELECT name, COUNT (*)
+FROM shanbay_latest
+GROUP BY name
+HAVING COUNT(*)>1;
+NAME                                                                               COUNT(*)
+-------------------------------------------------------------------------------- ----------
+                                                                                          2
+proxima                                                                                   2
+Malawi                                                                                    2
+close                                                                                     2
+
+SQL>
+```
+
+Number:  	Total: 	我的词库
+ROWNUM	GID	NAME	PRON	TIME	DATE	LISTNAME	SHOW
+1	37976	Malawi	/məˈlɑːwi/				显示词义
+2	442837	Malawi	/ˈmɑlɑˌwi/				显示词义
+3	421930	close					显示词义
+4	1649	close	/kloʊs/				显示词义
+5	330436	proxima	/ˈprɔksimә/				显示词义
+6	421870	proxima					显示词义
+共 1 页    当前第 1 页          转到
+ 页
+```
+
+DELETE FROM shanbay_latest WHERE g_id = 442837;
+DELETE FROM shanbay_latest WHERE g_id = 421930;
+DELETE FROM shanbay_latest WHERE g_id = 421870;
+
+

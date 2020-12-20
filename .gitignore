@@ -14,11 +14,7 @@ envs.py
 path.sh
 envs.sh
 pyutils
-gpu-config.txt
 
-data/
-log/
-cache/
 
 cmake-build-debug/
 cmake-build-release/
