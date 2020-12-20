@@ -18,6 +18,10 @@ export ORACLE_HOME=/home/oracle/app/oracle/product/11.2.0/dbhome_2
 export ORACLE_SID=helowin
 export PATH=$ORACLE_HOME/bin:$PATH
 
+add 
+source /etc/profile
+to /root/.bashrc
+
 /home/oracle/app/oracle/oradata/helowin/
 cp /home/oracle/orcl_kits/oradata/helowin/* /home/oracle/app/oracle/oradata/helowin/
 
