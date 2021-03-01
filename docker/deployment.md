@@ -1,16 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
+# process
 
 ```
 su root
@@ -99,6 +87,45 @@ vi /usr/local/Tomcat/webapps/terminal/WEB-INF/classes/c3p0-config.xml
 vi /usr/local/Tomcat/webapps/bay/WEB-INF/classes/c3p0-config.xml
 vi /usr/local/Tomcat/webapps/nce/WEB-INF/classes/c3p0-config.xml
 vi /usr/local/Tomcat/webapps/major/WEB-INF/classes/c3p0-config.xml
+
+```
+
+
+
+
+
+# password update
+
+```
+[oracle@f327fab1f269 ~]$ sqlplus /nolog;
+
+SQL*Plus: Release 11.2.0.1.0 Production on Mon Mar 1 10:19:03 2021
+Copyright (c) 1982, 2009, Oracle.  All rights reserved.
+
+SQL> conn major_2020_8_24_1
+Enter password: 
+ERROR:
+ORA-28001: the password has expired
+
+Changing password for major_2020_8_24_1
+New password: 
+Retype new password: 
+Password changed
+Connected.
+SQL> 
+
+
+2020-8-24-1 22:24:27
+add new major
+
+create user major_2020_8_24_1 identified by nmajor;
+grant connect,resource,dba to major_2020_8_24_1;
+
+imp 'major_2020_8_24_1/nmajor' file=/home/oracle/volume/tianm/orcl/oracle20190521/shabay.dmp full=Y
+vi /usr/local/Tomcat/webapps/nmajor/WEB-INF/classes/c3p0-config.xml
+
+
+vi /usr/local/Tomcat/webapps/imajor/WEB-INF/classes/c3p0-config.xml
 
 ```
 
