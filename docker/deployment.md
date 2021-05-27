@@ -136,14 +136,17 @@ SQL>
 2020-8-24-1 22:24:27
 add new major
 
+
+create
 create user major_2020_8_24_1 identified by nmajor;
 grant connect,resource,dba to major_2020_8_24_1;
 
 imp 'major_2020_8_24_1/nmajor' file=/home/oracle/volume/tianm/orcl/oracle20190521/shabay.dmp full=Y
 vi /usr/local/Tomcat/webapps/nmajor/WEB-INF/classes/c3p0-config.xml
-
-
 vi /usr/local/Tomcat/webapps/imajor/WEB-INF/classes/c3p0-config.xml
 
+
+alter
+alter  user  major_2020_8_24_1  identified by nmajor;
 ```
 
