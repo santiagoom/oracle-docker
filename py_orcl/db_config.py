@@ -1,6 +1,6 @@
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # Copyright (c) 2021, Oracle and/or its affiliates. All rights reserved.
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 import cx_Oracle
 import sys
@@ -23,11 +23,11 @@ instant_client_dir = None
 # be used as directory separators.
 if sys.platform.startswith("win"):
     # instant_client_dir = r"c:\oracle\instantclient_19_10"
-    instant_client_dir = r"H:\download\instantclient-basic-windows.x64-21.3.0.0.0\instantclient_21_3"
+    instant_client_dir = r"d:\orcl\instantclient-basic-windows.x64-21.3.0.0.0\instantclient_21_3"
 
 # On macOS (Intel x86) set the directory to your Instant Client directory
 if sys.platform.startswith("darwin"):
-    instant_client_dir = os.environ.get("HOME")+"/Downloads/instantclient_19_8"
+    instant_client_dir = os.environ.get("HOME") + "/Downloads/instantclient_19_8"
 
 # This can be called at most once per process.
 if instant_client_dir is not None:
@@ -44,6 +44,7 @@ user = os.environ.get("PYTHON_USER", "major_2020_8_24_1")
 
 dsn = os.environ.get("PYTHON_CONNECT_STRING", "192.168.1.196:1521/helowin")
 
-pw = os.environ.get("PYTHON_PASSWORD","nmajor")
+pw = os.environ.get("PYTHON_PASSWORD", "nmajor")
+# pw = os.environ.get("PYTHON_PASSWORD")
 if pw is None:
     pw = getpass.getpass("Enter password for %s: " % user)

@@ -18,7 +18,8 @@ def Query():
     con = pool.acquire()
     cur = con.cursor()
     for i in range(4):
-        cur.execute("select myseq.nextval from dual")
+        # cur.execute("select myseq.nextval from dual")
+        cur.execute("select sysdate from dual")
         seqval, = cur.fetchone()
         print("Thread", threading.current_thread().name, "fetched sequence =", seqval)
 

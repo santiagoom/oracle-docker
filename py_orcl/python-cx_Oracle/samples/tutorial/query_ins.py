@@ -1,5 +1,5 @@
 #------------------------------------------------------------------------------
-# bind_query.py (Section 4.1)
+# query.py (Section 1.3 and 1.4)
 #------------------------------------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -9,16 +9,19 @@
 import cx_Oracle
 import db_config
 
+from pyutils.logger_d2 import  setup_logger
+
+logger = setup_logger("./log/cx_oracle",name="cx_oracle")
+
 con = cx_Oracle.connect(db_config.user, db_config.pw, db_config.dsn)
+
+
 cur = con.cursor()
-
-# sql = "select * from dept where deptno = :id order by deptno"
-sql = "select * from testword2 where g_id = :gid"
-
-cur.execute(sql, gid = 1)
+cur.execute("select * from testword2 order by g_id")
 res = cur.fetchall()
-print(res)
+for row in res:
+    print(row)
+    logger.info(row)
 
-cur.execute(sql, gid = 2)
-res = cur.fetchall()
-print(res)
+cur.close()
+con.close()

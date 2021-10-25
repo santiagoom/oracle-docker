@@ -1,0 +1,244 @@
+[oracle@f327fab1f269 oracle_bay]$ imp 'iterminal_2020_8_24_1/iterminal' file=/home/oracle/volume/tianm/orcl/oracle_bay/iterminal.dmp full=Y
+
+Import: Release 11.2.0.1.0 - Production on Mon Aug 24 00:54:15 2020
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+
+Connected to: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+Export file created by EXPORT:V11.02.00 via conventional path
+
+Warning: the objects were exported by TERMINAL, not by you
+
+import done in US7ASCII character set and AL16UTF16 NCHAR character set
+import server uses AL32UTF8 character set (possible charset conversion)
+export client uses AL32UTF8 character set (possible charset conversion)
+export server uses UTF8 NCHAR character set (possible ncharset conversion)
+. importing TERMINAL's objects into ITERMINAL_2020_8_24_1
+. importing TERMINAL's objects into ITERMINAL_2020_8_24_1
+. . importing table                    "MERGE_ALL"     148076 rows imported
+. . importing table                          "PAD"          2 rows imported
+. . importing table                     "TERMITAL"     138932 rows imported
+. . importing table                    "TESTWORD2"     175602 rows imported
+. . importing table               "TESTWORD2_BACK"     148076 rows imported
+. . importing table                     "ULTIMATE"     138932 rows imported
+Import terminated successfully without warnings.
+[oracle@f327fab1f269 oracle_bay]$ clear
+[oracle@f327fab1f269 oracle_bay]$ imp 'bay_data_all_2020_8_24_1/bay' file=/home/oracle/volume/tianm/orcl/oracle20190521/shabay.dmp full=Y
+
+Import: Release 11.2.0.1.0 - Production on Mon Aug 24 01:22:23 2020
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+
+Connected to: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+Export file created by EXPORT:V11.02.00 via conventional path
+
+Warning: the objects were exported by SHANBAY, not by you
+
+import done in US7ASCII character set and AL16UTF16 NCHAR character set
+import server uses AL32UTF8 character set (possible charset conversion)
+export client uses AL32UTF8 character set (possible charset conversion)
+. importing SHANBAY's objects into BAY_DATA_ALL_2020_8_24_1
+. importing SHANBAY's objects into BAY_DATA_ALL_2020_8_24_1
+. . importing table                        "MAJOR"      27526 rows imported
+. . importing table                      "SHANBAY"      27526 rows imported
+. . importing table                    "TESTWORD2"     175602 rows imported
+. . importing table                        "USERS"         16 rows imported
+Import terminated successfully without warnings.
+[oracle@f327fab1f269 oracle_bay]$ imp 'bay_all_before_2020_8_24_1/bay' file=/home/oracle/volume/tianm/orcl/oracle20190521/table_shanbay.dmp full=Y
+
+Import: Release 11.2.0.1.0 - Production on Mon Aug 24 01:23:03 2020
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+
+Connected to: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+Export file created by EXPORT:V11.02.00 via conventional path
+
+Warning: the objects were exported by SHANBAY, not by you
+
+import done in US7ASCII character set and AL16UTF16 NCHAR character set
+import server uses AL32UTF8 character set (possible charset conversion)
+export client uses AL32UTF8 character set (possible charset conversion)
+export server uses UTF8 NCHAR character set (possible ncharset conversion)
+. importing SHANBAY's objects into BAY_ALL_BEFORE_2020_8_24_1
+. importing SHANBAY's objects into BAY_ALL_BEFORE_2020_8_24_1
+. . importing table                      "SHANBAY"      27526 rows imported
+Import terminated successfully without warnings.
+[oracle@f327fab1f269 oracle_bay]$ imp 'ince_2020_8_24_1/ince' file=/home/oracle/volume/tianm/orcl/oracle20190521/inec.dmp full=Y
+
+Import: Release 11.2.0.1.0 - Production on Mon Aug 24 01:23:28 2020
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+
+Connected to: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+Export file created by EXPORT:V11.02.00 via conventional path
+
+Warning: the objects were exported by INCE, not by you
+
+import done in US7ASCII character set and AL16UTF16 NCHAR character set
+import server uses AL32UTF8 character set (possible charset conversion)
+export client uses AL32UTF8 character set (possible charset conversion)
+. importing INCE's objects into INCE_2020_8_24_1
+. importing INCE's objects into INCE_2020_8_24_1
+. . importing table                          "COL"      36671 rows imported
+. . importing table                  "EXTRACTNAME"        260 rows imported
+. . importing table                    "LIST_NAME"        317 rows imported
+. . importing table                       "NECV10"       3606 rows imported
+. . importing table              "NECV11_COMPLETE"       3606 rows imported
+. . importing table       "NECV12_UPDATE_LISTNAME"       3606 rows imported
+. . importing table                      "SHANBAY"      27526 rows imported
+. . importing table                    "SHANBAY_P"       9145 rows imported
+. . importing table                         "TEMP"       3606 rows imported
+. . importing table                    "TESTWORD2"       3606 rows imported
+. . importing table             "TESTWORD2_BACKUP"       3606 rows imported
+. . importing table                      "TYPENEC"       3606 rows imported
+. . importing table                        "USERS"          2 rows imported
+. . importing table                         "ZLYN"       3606 rows imported
+Import terminated successfully without warnings.
+[oracle@f327fab1f269 oracle_bay]$ imp 'imajor_2020_8_24_1/major' file=/home/oracle/volume/tianm/orcl/oracle20190521/imajor20190521.dmp full=Y
+
+Import: Release 11.2.0.1.0 - Production on Mon Aug 24 01:23:48 2020
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+
+Connected to: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+Export file created by EXPORT:V11.02.00 via conventional path
+
+Warning: the objects were exported by IMAJOR, not by you
+
+import done in US7ASCII character set and AL16UTF16 NCHAR character set
+import server uses AL32UTF8 character set (possible charset conversion)
+export client uses AL32UTF8 character set (possible charset conversion)
+. importing IMAJOR's objects into IMAJOR_2020_8_24_1
+. importing IMAJOR's objects into IMAJOR_2020_8_24_1
+. . importing table                        "MAJOR"
+IMP-00019: row rejected due to ORACLE error 12899
+IMP-00003: ORACLE error 12899 encountered
+ORA-12899: value too large for column "IMAJOR_2020_8_24_1"."MAJOR"."PRON" (actual: 122, maximum: 100)
+Column 1 40047
+Column 2
+Column 3 Capitoline
+Column 4 /k????p??t??l????n k????p??tl??????n ??kap??t??l??...
+Column 5
+Column 6
+Column 7
+Column 8
+Column 9 adj. ???????Jupiter ???<br>.n. ???????????<br>.<br...
+Column 10
+Column 11       55051 rows imported
+. . importing table                    "TESTWORD2"
+IMP-00009: abnormal end of export file
+IMP-00028: partial import of previous table rolled back: 175595 rows rolled back
+Import terminated successfully with warnings.
+[oracle@f327fab1f269 oracle_bay]$ imp 'merge_back_2020_8_24_1/merge_back' file=/home/oracle/volume/tianm/orcl/oracle_bay/merge_back.dmp full=Y
+
+Import: Release 11.2.0.1.0 - Production on Mon Aug 24 01:25:08 2020
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+
+Connected to: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+Export file created by EXPORT:V11.02.00 via conventional path
+
+Warning: the objects were exported by TERMINAL, not by you
+
+import done in US7ASCII character set and AL16UTF16 NCHAR character set
+import server uses AL32UTF8 character set (possible charset conversion)
+export client uses AL32UTF8 character set (possible charset conversion)
+export server uses UTF8 NCHAR character set (possible ncharset conversion)
+. importing TERMINAL's objects into MERGE_BACK_2020_8_24_1
+. importing TERMINAL's objects into MERGE_BACK_2020_8_24_1
+. . importing table                    "MERGE_ALL"     148076 rows imported
+Import terminated successfully without warnings.
+[oracle@f327fab1f269 oracle_bay]$
+
+
+[oracle@f327fab1f269 oracle_bay]$ imp 'imajor_2020_8_24_1/major' file=/home/oracle/volume/tianm/orcl/oracle_bay/major.dmp full=Y
+
+Import: Release 11.2.0.1.0 - Production on Mon Aug 24 01:32:22 2020
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+
+Connected to: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+Export file created by EXPORT:V11.02.00 via conventional path
+
+Warning: the objects were exported by IMAJOR, not by you
+
+import done in US7ASCII character set and AL16UTF16 NCHAR character set
+import server uses AL32UTF8 character set (possible charset conversion)
+export client uses AL32UTF8 character set (possible charset conversion)
+export server uses UTF8 NCHAR character set (possible ncharset conversion)
+. importing IMAJOR's objects into IMAJOR_2020_8_24_1
+. importing IMAJOR's objects into IMAJOR_2020_8_24_1
+. . importing table                    "TESTWORD2"      27526 rows imported
+Import terminated successfully without warnings.
+[oracle@f327fab1f269 oracle_bay]$
+
+
+
+
+Last login: Mon Aug 24 01:43:55 2020 from 192.168.1.244
+[oracle@f327fab1f269 ~]$ imp 'word_2020_8_24_1/word' file=/home/oracle/volume/tianm/orcl/oracle20190521/iword20170608.dmp full=Y
+
+Import: Release 11.2.0.1.0 - Production on Mon Aug 24 01:53:54 2020
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+
+Connected to: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+Export file created by EXPORT:V11.02.00 via conventional path
+
+Warning: the objects were exported by IWORD, not by you
+
+import done in US7ASCII character set and AL16UTF16 NCHAR character set
+import server uses AL32UTF8 character set (possible charset conversion)
+export client uses AL32UTF8 character set (possible charset conversion)
+export server uses UTF8 NCHAR character set (possible ncharset conversion)
+. importing IWORD's objects into WORD_2020_8_24_1
+. importing IWORD's objects into WORD_2020_8_24_1
+. . importing table                      "SHANBAY"      27526 rows imported
+. . importing table                    "TESTWORD2"      27531 rows imported
+. . importing table                        "TRADE"        113 rows imported
+. . importing table                        "USERS"          2 rows imported
+. . importing table                      "WORDV00"      17704 rows imported
+. . importing table                      "WORDV01"      17704 rows imported
+. . importing table                      "WORDV02"      17749 rows imported
+. . importing table                      "WORDV03"      17749 rows imported
+. . importing table                      "WORDV04"      17749 rows imported
+. . importing table                      "WORDV05"      17749 rows imported
+. . importing table                      "WORDV06"      17749 rows imported
+. . importing table               "WORDV10_NOSORT"      27531 rows imported
+. . importing table                "WORDV11_EMPTY"      27531 rows imported
+. . importing table             "WORDV12_20160925"      27531 rows imported
+. . importing table             "WORDV13_20170608"      27531 rows imported
+. . importing table                "WORDV21_EMPTY"      27531 rows imported
+. . importing table             "WORDV22_20170608"      27531 rows imported
+IMP-00041: Warning: object created with compilation warnings
+ "CREATE TRIGGER "WORD_2020_8_24_1".tg_trade "
+ "BEFORE INSERT ON trade FOR EACH ROW WHEN (new.TRADEID is null)"
+ "begin"
+ "select seq_trade.nextval into:new.TRADEID from dual;"
+ "end;"
+Import terminated successfully with warnings.
+[oracle@f327fab1f269 ~]$

@@ -1,0 +1,85 @@
+[oracle@f327fab1f269 oracle_bay]$ imp 'bay_all_before_2020_8_24_1/bay' file=/home/oracle/volume/tianm/orcl/oracle_bay/bay_all.dmp full=Y
+
+Import: Release 11.2.0.1.0 - Production on Mon Aug 24 00:48:52 2020
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+
+Connected to: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+Export file created by EXPORT:V11.02.00 via conventional path
+
+Warning: the objects were exported by TERMINAL, not by you
+
+import done in US7ASCII character set and AL16UTF16 NCHAR character set
+import server uses AL32UTF8 character set (possible charset conversion)
+export client uses AL32UTF8 character set (possible charset conversion)
+export server uses UTF8 NCHAR character set (possible ncharset conversion)
+. importing TERMINAL's objects into BAY_ALL_BEFORE_2020_8_24_1
+. importing TERMINAL's objects into BAY_ALL_BEFORE_2020_8_24_1
+. . importing table                    "TESTWORD2"     175602 rows imported
+Import terminated successfully without warnings.
+[oracle@f327fab1f269 oracle_bay]$ imp 'ince_2020_8_24_1/ince' file=/home/oracle/volume/tianm/orcl/oracle_bay/inec20190318.dmp full=Y
+
+Import: Release 11.2.0.1.0 - Production on Mon Aug 24 00:51:58 2020
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+
+Connected to: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+Export file created by EXPORT:V11.02.00 via conventional path
+
+Warning: the objects were exported by INEC, not by you
+
+import done in US7ASCII character set and AL16UTF16 NCHAR character set
+import server uses AL32UTF8 character set (possible charset conversion)
+export client uses AL32UTF8 character set (possible charset conversion)
+export server uses UTF8 NCHAR character set (possible ncharset conversion)
+. importing INEC's objects into INCE_2020_8_24_1
+. importing INEC's objects into INCE_2020_8_24_1
+. . importing table                          "COL"      36671 rows imported
+. . importing table                  "EXTRACTNAME"        260 rows imported
+. . importing table                    "LIST_NAME"        317 rows imported
+. . importing table                       "NECV10"       3606 rows imported
+. . importing table              "NECV11_COMPLETE"       3606 rows imported
+. . importing table       "NECV12_UPDATE_LISTNAME"       3606 rows imported
+. . importing table                      "SHANBAY"      27526 rows imported
+. . importing table                    "SHANBAY_P"       9145 rows imported
+. . importing table                         "TEMP"       3606 rows imported
+. . importing table                    "TESTWORD2"       3606 rows imported
+. . importing table                      "TYPENEC"       3606 rows imported
+. . importing table                        "USERS"          2 rows imported
+. . importing table                         "ZLYN"       3606 rows imported
+. . importing table                         "ZY01"        200 rows imported
+Import terminated successfully without warnings.
+[oracle@f327fab1f269 oracle_bay]$ imp 'iterminal_2020_8_24_1/iterminal' file=/home/oracle/volume/tianm/orcl/oracle_bay/iterminal.dmp full=Y
+
+Import: Release 11.2.0.1.0 - Production on Mon Aug 24 00:54:15 2020
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+
+Connected to: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+Export file created by EXPORT:V11.02.00 via conventional path
+
+Warning: the objects were exported by TERMINAL, not by you
+
+import done in US7ASCII character set and AL16UTF16 NCHAR character set
+import server uses AL32UTF8 character set (possible charset conversion)
+export client uses AL32UTF8 character set (possible charset conversion)
+export server uses UTF8 NCHAR character set (possible ncharset conversion)
+. importing TERMINAL's objects into ITERMINAL_2020_8_24_1
+. importing TERMINAL's objects into ITERMINAL_2020_8_24_1
+. . importing table                    "MERGE_ALL"     148076 rows imported
+. . importing table                          "PAD"          2 rows imported
+. . importing table                     "TERMITAL"     138932 rows imported
+. . importing table                    "TESTWORD2"     175602 rows imported
+. . importing table               "TESTWORD2_BACK"     148076 rows imported
+. . importing table                     "ULTIMATE"     138932 rows imported
+Import terminated successfully without warnings.
+[oracle@f327fab1f269 oracle_bay]$

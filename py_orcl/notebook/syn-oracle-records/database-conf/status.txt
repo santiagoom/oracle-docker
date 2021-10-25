@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+USERNAME                          USER_ID PASSWORD                       ACCOUNT_STATUS                   LOCK_DATE   EXPIRY_DATE DEFAULT_TABLESPACE             TEMPORARY_TABLESPACE           CREATED     PROFILE                        INITIAL_RSRC_CONSUMER_GROUP    EXTERNAL_NAME                                                                    PASSWORD_VERSIONS EDITIONS_ENABLED AUTHENTICATION_TYPE
+------------------------------ ---------- ------------------------------ -------------------------------- ----------- ----------- ------------------------------ ------------------------------ ----------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- ----------------- ---------------- -------------------
+
+SYS                                     0                                OPEN                                         2017/1/1 17 SYSTEM                         TEMP                           2010/4/2 13 DEFAULT                        SYS_GROUP                                                                                                       10G 11G           N                PASSWORD
+SYSTEM                                  5                                OPEN                                         2018/9/14 2 SYSTEM                         TEMP                           2010/4/2 13 DEFAULT                        SYS_GROUP                                                                                                       10G 11G           N                PASSWORD
+SCOTT                                  84                                OPEN                                         2017/1/1 18 USERS                          TEMP                           2010/4/2 14 DEFAULT                        DEFAULT_CONSUMER_GROUP                                                                                          10G 11G           N                PASSWORD
+WORD                                   91                                OPEN                                         2018/9/14 2 USERS                          TEMP                           2016/7/6 10 DEFAULT                        DEFAULT_CONSUMER_GROUP                                                                                          10G 11G           N                PASSWORD
+BAY                                    92                                EXPIRED(GRACE)                               2020/8/30 1 USERS                          TEMP                           2018/3/18 2 DEFAULT                        DEFAULT_CONSUMER_GROUP                                                                                          10G 11G           N                PASSWORD
+
+

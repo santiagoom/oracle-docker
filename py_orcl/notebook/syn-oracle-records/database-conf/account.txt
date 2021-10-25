@@ -1,0 +1,43 @@
+
+
+
+
+
+
+word
+nec
+cet-6
+wordweb
+bay_p_c
+major
+test
+bay_p
+bay
+
+
+nce
+SQL> select * from users;
+USERNAME             PASSWORD
+-------------------- --------------------
+Nec                  e
+Jerry                1234
+
+
+
+imajor
+SQL> select * from users;
+USERNAME             PASSWORD
+-------------------- --------------------
+Major                s
+
+
+NMajor
+SQL> commit;
+Commit complete
+
+SQL> insert into USERS (USERNAME, PASSWORD) values ('NMajor', 'n');
+;
+1 row inserted
+
+bay
+Jerry                s

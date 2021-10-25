@@ -15,6 +15,7 @@ path.sh
 envs.sh
 pyutils
 
+*.pyc
 
 cmake-build-debug/
 cmake-build-release/
