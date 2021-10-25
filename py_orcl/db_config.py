@@ -28,7 +28,8 @@ if sys.platform.startswith("win"):
 
 # On macOS (Intel x86) set the directory to your Instant Client directory
 if sys.platform.startswith("darwin"):
-    instant_client_dir = os.environ.get("HOME") + "/Downloads/instantclient_19_8"
+    # instant_client_dir = os.environ.get("HOME") + "/Downloads/instantclient_19_8"
+    instant_client_dir = "/Users/tianm/docker/oracle/instantclient_19_8"
     dsn = os.environ.get("PYTHON_CONNECT_STRING", "127.0.0.1:1521/helowin")
 
 # This can be called at most once per process.

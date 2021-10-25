@@ -148,5 +148,15 @@ vi /usr/local/Tomcat/webapps/imajor/WEB-INF/classes/c3p0-config.xml
 
 alter
 alter  user  major_2020_8_24_1  identified by nmajor;
+
+
+select username from dba_users;
+
+tianm@localhost instantclient_19_8 % export ORACLE_SID=helowin
+tianm@localhost instantclient_19_8 % export PATH=~/Downloads/instantclient_19_8:$PATH
+https://docs.oracle.com/database/121/NETAG/concepts.htm#NETAG253
+
+correct:
+sqlplus major_2020_8_24_1@127.0.0.1:1521/helowin
 ```
 
