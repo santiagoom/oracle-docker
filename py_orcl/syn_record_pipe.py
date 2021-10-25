@@ -30,9 +30,9 @@ def read_records():
     records = []
     for line in lines:
         g_id = line.strip().split(",")[0].strip()[1:]
-        name = line.strip().split(",")[1].strip()[1:-1]
+        name = line.strip().split(",")[1].strip()[:]
         mtime = line.strip().split(",")[2].strip()
-        mdate = line.strip().split(",")[3].strip()[1:-2]
+        mdate = line.strip().split(",")[3].strip()[:-1]
         mdate = datetime.strptime(mdate, "%d-%m-%Y %H:%M:%S")
         records.append((g_id, name, mtime, mdate))
     return records
@@ -98,9 +98,17 @@ def merge_records(records, query):
     with open(record_all, mode="w", encoding="utf8") as f:
         f.write("")
     for each in merged:
+        g_id = each[0]
+        name = each[1][0]
+        mtime = each[1][1]
+        mdate = each[1][2]
+        mdate = mdate.strftime("%d-%m-%Y %H:%M:%S")
+        record = "({},{},{},{})".format(g_id, name, mtime, mdate)
+
         # logger.info(each)
         with open(record_all, mode="a", encoding="utf8") as f:
-            f.write(str(each) + "\n")
+            f.write(record + "\n")
+
     update_list_sort = sorted(update_list, key=lambda d: d[3])
 
     for each in update_list_sort:
@@ -131,6 +139,9 @@ def update_records(update_list):
     cur.close()
     con.close()
 
+    logger.info("update {} rows...".format(len(rows)))
+    logger.info("commit complete...")
+
 
 def update_individual():
     con = cx_Oracle.connect(db_config.user, db_config.pw, db_config.dsn)
@@ -153,7 +164,7 @@ def run():
     # flag = False
     if flag:
         records = read_records()
-        if len(records) < 0:
+        if len(records) <= 0:
             print("record file is not empty...")
             exit(-1)
             return
