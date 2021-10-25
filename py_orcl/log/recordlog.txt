@@ -1,0 +1,3 @@
+[10/25 21:47:04] nmajor INFO: (47253, 'john', 2, datetime.datetime(2021, 10, 18, 21, 42, 59))
+[10/25 21:47:04] nmajor INFO: (219295, 'fayalite', 2, datetime.datetime(2021, 10, 18, 21, 42, 59))
+[10/25 21:47:04] nmajor INFO: (18204, 'anneal', 0, datetime.datetime(2021, 10, 19, 21, 42, 59))

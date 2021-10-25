@@ -122,7 +122,7 @@ def update_records(update_list):
         rows.append(row)
 
     sql = "update testword2 set name = :name, mtime = :mtime, mdate = to_date(:mdate, \'dd-mm-yyyy hh24:mi:ss\') where g_id = :g_id"
-    sql1 = "update testword2 set mtime = null, mdate = null where g_id = 18204"
+    # sql1 = "update testword2 set mtime = null, mdate = null where g_id = 18204"
 
     for row in rows:
         cur.execute(sql, {"name": row["name"], "mtime": row["mtime"], "mdate": row["mdate"], "g_id": row["g_id"]})
@@ -132,15 +132,36 @@ def update_records(update_list):
     con.close()
 
 
+def update_individual():
+    con = cx_Oracle.connect(db_config.user, db_config.pw, db_config.dsn)
+    cur = con.cursor()
+
+    sql1 = "update testword2 set mtime = null, mdate = null where g_id = 47253"
+    cur.execute(sql1)
+    sql2 = "update testword2 set mtime = null, mdate = null where g_id = 219295"
+    cur.execute(sql2)
+    sql3 = "update testword2 set mtime = null, mdate = null where g_id = 18204"
+    cur.execute(sql3)
+    con.commit()
+    cur.close()
+    con.close()
+    pass
+
+
 def run():
-    records = read_records()
-    if len(records) < 0:
-        print("record file is not empty...")
-        exit(-1)
-        return
-    query = query_records()
-    update_list = merge_records(records, query)
-    update = update_records(update_list)
+    flag = True
+    # flag = False
+    if flag:
+        records = read_records()
+        if len(records) < 0:
+            print("record file is not empty...")
+            exit(-1)
+            return
+        query = query_records()
+        update_list = merge_records(records, query)
+        update = update_records(update_list)
+    else:
+        update_individual()
 
 
 if __name__ == '__main__':
