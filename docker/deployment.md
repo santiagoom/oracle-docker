@@ -23,7 +23,7 @@ source /etc/profile
 to /root/.bashrc
 
 /home/oracle/app/oracle/oradata/helowin/
-cp /home/oracle/orcl_kits/oradata/helowin/* /home/oracle/app/oracle/oradata/helowin/
+/bin/cp -rf /home/oracle/orcl_kits/oradata/helowin/* /home/oracle/app/oracle/oradata/helowin/
 
 sqlplus /nolog;
 conn /as sysdba;
