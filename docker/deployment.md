@@ -10,6 +10,10 @@ orcl
 ```
 docker run -it -v /Users/tianm/docker/volume/:/home/oracle/volume -p 8002:22  -p 1521:1521 -p 8020:8080 --name orcl-11g-v1 imagezero/orcl-11g:v1 /bin/bash
 
+
+docker run -it -v /home/yons/data-c/tianm/host195/:/root/volume  -v /home/yons/data-b/:/root/data-b -v /home/yons/data-c/:/root/data-c -v /etc/localtime:/etc/localtime --name="tianming"  -p 8002:22  -p 1521:1521 -p 8020:8080 --name="orcl" imagezero/orcl-11g:v1  /bin/bash 
+
+
 su root
 root
 
@@ -141,7 +145,7 @@ create
 create user major_2020_8_24_1 identified by nmajor;
 grant connect,resource,dba to major_2020_8_24_1;
 
-imp 'major_2020_8_24_1/nmajor' file=/home/oracle/volume/tianm/orcl/oracle20190521/shabay.dmp full=Y
+imp 'major_2020_8_24_1/nmajor' file=/home/oracle/orcl_kits/dmp/oracle20190521/shabay.dmp full=Y
 vi /usr/local/Tomcat/webapps/nmajor/WEB-INF/classes/c3p0-config.xml
 vi /usr/local/Tomcat/webapps/imajor/WEB-INF/classes/c3p0-config.xml
 
