@@ -24,7 +24,8 @@ instant_client_dir = None
 if sys.platform.startswith("win"):
     # instant_client_dir = r"c:\oracle\instantclient_19_10"
     instant_client_dir = r"d:\orcl\instantclient-basic-windows.x64-21.3.0.0.0\instantclient_21_3"
-    dsn = os.environ.get("PYTHON_CONNECT_STRING", "192.168.1.196:1521/helowin")
+    # dsn = os.environ.get("PYTHON_CONNECT_STRING", "192.168.1.196:1521/helowin")
+    dsn = os.environ.get("PYTHON_CONNECT_STRING", "10.1.10.6:1521/helowin")
 
 # On macOS (Intel x86) set the directory to your Instant Client directory
 if sys.platform.startswith("darwin"):
