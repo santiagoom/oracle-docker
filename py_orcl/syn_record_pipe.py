@@ -147,12 +147,21 @@ def update_individual():
     con = cx_Oracle.connect(db_config.user, db_config.pw, db_config.dsn)
     cur = con.cursor()
 
-    sql1 = "update testword2 set mtime = null, mdate = null where g_id = 47253"
-    cur.execute(sql1)
-    sql2 = "update testword2 set mtime = null, mdate = null where g_id = 219295"
-    cur.execute(sql2)
-    sql3 = "update testword2 set mtime = null, mdate = null where g_id = 18204"
-    cur.execute(sql3)
+    # sql1 = "update testword2 set mtime = null, mdate = null where g_id = 47253"
+    # cur.execute(sql1)
+    # sql2 = "update testword2 set mtime = null, mdate = null where g_id = 219295"
+    # cur.execute(sql2)
+    # sql3 = "update testword2 set mtime = null, mdate = null where g_id = 122"
+    # cur.execute(sql3)
+
+    # sql = "update testword2 set mtime = null, mdate = null where  to_date(:mdate, \'dd-mm-yyyy hh24:mi:ss\') < to_date('26-05-2018', 'dd-mm-yyyy');"
+    # cur.execute(sql)
+
+    # sql = "update testword2 set mtime = null;"
+    # cur.execute(sql)
+    # sql = "update testword2 set mdate = null;"
+    # cur.execute(sql)
+
     con.commit()
     cur.close()
     con.close()

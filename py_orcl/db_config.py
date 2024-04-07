@@ -31,7 +31,8 @@ if sys.platform.startswith("win"):
 if sys.platform.startswith("darwin"):
     # instant_client_dir = os.environ.get("HOME") + "/Downloads/instantclient_19_8"
     instant_client_dir = "/Users/tianm/docker/oracle/instantclient_19_8"
-    dsn = os.environ.get("PYTHON_CONNECT_STRING", "127.0.0.1:1521/helowin")
+    # dsn = os.environ.get("PYTHON_CONNECT_STRING", "127.0.0.1:1521/helowin")
+    dsn = os.environ.get("PYTHON_CONNECT_STRING", "192.168.3.126:1521/helowin")
 
 # This can be called at most once per process.
 if instant_client_dir is not None:
