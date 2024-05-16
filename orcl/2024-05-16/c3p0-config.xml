@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+  
+  <named-config name="mvcapp"> 
+   	
+   	<property name="user">root</property>
+   	<property name="password">root</property>
+   	<property name="driverClass">com.mysql.jdbc.Driver</property>
+   	<property name="jdbcUrl">jdbc:mysql:///idatabase</property>
+   
+    <property name="acquireIncrement">5</property>
+    <property name="initialPoolSize">10</property>
+    <property name="minPoolSize">10</property>
+    <property name="maxPoolSize">50</property>
+
+    <property name="maxStatements">20</property> 
+    <property name="maxStatementsPerConnection">5</property>
+   </named-config>
+   
+  <named-config name="javawebapp"> 
+   	
+   	<property name="user">major_2020_8_24_1</property>
+   	<property name="password">nmajor</property>
+   	<property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
+   	<property name="jdbcUrl">jdbc:oracle:thin:@192.168.3.86:1531:Free</property>
+   
+    <property name="acquireIncrement">5</property>
+    <property name="initialPoolSize">10</property>
+    <property name="minPoolSize">10</property>
+    <property name="maxPoolSize">2000</property>
+
+    <property name="maxStatements">0</property> 
+    <property name="maxStatementsPerConnection">5</property>
+   </named-config>
+</c3p0-config>
+	
